@@ -1,0 +1,26 @@
+mixin externalLink(link,text)
+	a(href=`${link}` rel="noopener noreferrer" target="_blank")&attributes(attributes)!= text
+mixin rowBlockLeft(imageSource, imageAlt)
+	section.row&attributes(attributes)
+		.col.s7
+			if block
+				block
+			else
+				p= '<mxRBL: NO CONTENT>'
+		.col.s5
+			if imageSource && imageAlt
+				img.z-depth-1(src=imageSource alt=imageAlt)
+			else
+				// No Image Provided
+mixin rowBlockRight(imageSource, imageAlt)
+	section.row&attributes(attributes)
+		.col.s5
+			if imageSource && imageAlt
+				img.z-depth-1(src=imageSource alt=imageAlt)
+			else
+				// No Image Provided
+		.col.s7
+			if block
+				block
+			else
+				p= '<mxRBR: NO CONTENT>'

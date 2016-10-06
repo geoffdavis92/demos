@@ -1,6 +1,8 @@
 block frontmatter
 include ../partials/head
-body
-	section.container
+body.template-home
+	block pageHeader
+	main.container
 		block content
 	include ../partials/footer
+- console.log('Homepage compiled.')

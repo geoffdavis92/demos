@@ -1,3 +1,5 @@
+include siteData
+include mixins
 doctype html
 head
 	if page
@@ -5,3 +7,69 @@ head
 	else
 		title React Example
 	link(href="css/materialize.css" rel="stylesheet")
+	link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+	style.
+		nav h1, nav h2, nav h3 {
+			line-height: 64px;
+		}
+		p + h3 {
+			margin-left: calc(-4rem - 60.5px) !important;
+			width: 100%;
+		}
+		code {
+			background: #eee;
+			padding: 1px 3px;
+		}
+		dt {
+			font-weight: bold;
+		}
+		img {
+			display: block;
+			max-width: 100%;
+		}
+		main, main.container, article.container {
+			margin: 2.5rem auto;
+		}
+		nav a.block {
+			margin-left: 1rem;
+		    padding: 1rem 1.5rem;
+		    line-height: 2.3rem;
+		    font-size: 1.5rem;
+		}
+		footer ul.pagination {
+			margin: 0 auto;
+			max-width: 300px;
+			text-align: center;
+		}
+		/* classes */
+		.valign-bottom {
+			vertical-align: bottom;
+		}
+		.block {
+			display: block;
+		}
+		.clearfix:before, .clearfix:after {
+			content: " ";
+			display: table;
+		}
+		.clearfix:after {
+			clear: both;
+		}
+		.no-margin {
+			margin: 0 auto;
+		}
+		.no-select {
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+		.padding {
+			padding: .5em;
+		}
+		.text-center {
+			text-align: center;
+		}
+		.text-right {
+			text-align: right;
+		}

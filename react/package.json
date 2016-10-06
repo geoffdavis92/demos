@@ -4,10 +4,12 @@
   "description": "React demo for Archer Malmo",
   "main": "\"\"",
   "scripts": {
-    "babel": "cd source; babel -w js/* -d ../public/; cd -;",
+    "build": "cd source && babel js/* -d ../public/; cp -r css ../public/; pug views/{examples/*,*}.pug -o ../public -p views/parts/partials; cd -;",
+    "babel": "cd source; babel -w js/**/* -d ../public/; cd -;",
+    "clean": "rm -r public",
     "css": "cp -r source/css public/",
     "pug": "pug -w source/views/{examples/*,*}.pug -o public -p source/views/parts/partials",
-    "serve": "cd public; httpster -p 20102; cd -;",
+    "serve": "cd public && httpster -p 20102; cd -;",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Geoff Davis <gdavis@archermalmo.com>",
@@ -15,7 +17,8 @@
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-cli": "^6.16.0",
-    "pug": "^2.0.0-beta6"
+    "pug": "^2.0.0-beta6",
+    "pug-cli": "0.0.0"
   },
   "dependencies": {
     "react": "^15.3.2",

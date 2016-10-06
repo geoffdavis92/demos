@@ -1,0 +1,18 @@
+block frontmatter
+include ../partials/head
+if page
+	- page.isLesson = true
+else
+	- var page = {}
+	- page.isLesson = true
+body.template-lesson
+	include ../partials/innerPageNav
+	main.container
+		section.row
+			article.col.s7
+				block lessonContent
+			aside.col.s5
+				block lessonCode
+	include ../partials/footer
+	
+- console.log('Lesson compiled: ', page.title)

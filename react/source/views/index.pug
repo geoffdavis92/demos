@@ -1,3 +1,40 @@
 extends parts/templates/home
+block frontmatter
+	- var page = {}
+	- page.title = "Home | AM React Tutorial"
+	- page.order = 0
+block pageHeader
+	nav.orange.accent-4
+		h2.text-center.no-margin: a(href="/") React Tutorial
 block content
-	h1 React Tutorial
+	h3 What we'll cover
+	section.row
+		.col.s7
+			ul.collection
+				li.collection-item #[strong What is React.js?]#[br] Get a brief overview of this popular library.
+				li.collection-item #[strong React Use Cases]#[br] Look at some sites/web applications that have used React.
+				li.collection-item #[strong Setup]#[br] Learn about setting up a simple React application.
+				li.collection-item #[strong Hello World]#[br] Start learning the API using this classic demo.
+				li.collection-item #[strong Fundementals of React]#[br] Expand your knowledge of React's API, including lifecycle, data-integrations, and more.
+				li.collection-item #[strong Making a ToDo List App]#[br] Build a simple todo list application.
+		//- .col.s1
+		.col.s5
+			img.z-depth-1(src="http://michaelmac.org/presentations/reinvigorate/lib/react-icon.png" title="http://michaelmac.org/presentations/reinvigorate/lib/react-icon.png")
+	section.row
+		.col.s5
+			h3 &nbsp;
+			img.z-depth-1(src="https://alxd.org/images/13_second_steps/main_img.png" title="https://alxd.org/images/13_second_steps/main_img.png")
+		.col.s7
+			h3 What you'll need
+			ul.collection
+				li.collection-item #[strong Example React #[code .jsx] files]#[br] #[a(href) Get them from this repo &raquo;]
+				li.collection-item #[strong React, ReactDOM, and Babel NPM packages]#[br] Run the following in your command line: #[br] #[small #[code $ npm i --save react react-dom; npm i --save-dev babel-cli;]]
+				li.collection-item #[strong Some knowledge of ES6/ES2015]#[br] Revisit #[a(href="#!") Wil's talk] or check out #[a(href="https://babeljs.io/docs/learn-es2015/") this cheatsheet]
+				li.collection-item #[strong React DevTools browser extension]#[br] This is used to inspect and debug React applications. (only supports Chrome and Firefox) #[+externalLink('https://github.com/facebook/react-devtools#installation','Download it here&nbsp;&raquo;')]
+	section.row
+		.col.s4
+		.col.s4.text-center
+			p
+				br
+				a.btn-large.waves-effect.waves-light.light-blue(href="/01-what-is-react.html" style="display:block") Let's Get Started &raquo;
+		.col.s4

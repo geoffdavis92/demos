@@ -1,2 +1,34 @@
-footer.container
-	small for Archer Malmo 2016
+footer.page-footer.orange.accent-4
+	.container
+		if page
+			if page.isLesson || page.isExample  || page.isInfo
+				if page.back
+					- var backURL = `${page.back.replace(/\s/g,'-').replace(/\?/g,'').toLowerCase()}.html`
+				else
+					- var backURL = '/'
+				if page.next
+					- var nextURL = `${page.next.replace(/\s/g,'-').replace(/\?/g,'').toLowerCase()}.html`
+				.row.clearfix
+					.col.s4
+						a.btn.left.no-select.waves-effect.waves-light.light-blue(href=`${backURL}`) &laquo;&nbsp;Back
+					.col.s4
+						ul(class="pagination")
+							each sitepage, i in sitepages
+								if sitepage.title === page.title
+									- var footerLiClass = 'light-blue z-depth-1'
+									- var footerAClass = 'white-text'
+								else
+									- var footerLiClass = 'waves-effect'
+									- var footerAClass = 'white-text'
+								if i > 0
+									li(class=footerLiClass): a(href=sitepage.url class=footerAClass)= i
+					.col.s4
+						if nextURL 
+							a.btn.right.no-select.waves-effect.waves-light.light-blue(href=`${nextURL}`) Next&nbsp;&raquo;
+	.footer-copyright
+		.container.grey-text.text-lighten-4
+			small For Archer Malmo Digital Department.
+			small.right Created by Geoff Davis, 2016.
+if page && page.scripts
+	for script in page.scripts
+		script(src=`/js/${script}.js`)

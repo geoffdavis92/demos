@@ -1,0 +1,28 @@
+extends ../parts/templates/info
+block frontmatter
+	- var page = {};
+	- page.title = '01 What Is React?'
+	- page.next = '02 React Use Cases'
+block content
+	h3 From the #[+externalLink('https://facebook.github.io/react/','React website&hellip;')]
+	+rowBlockLeft('http://image.prntscr.com/image/2d88921a342c42419bf859d68d24104c.png','https://facebook.github.io/react')
+		blockquote A Javascript library for building user interfaces.
+		p #[strong React.js] is a streamlined and powerful library that can quickly create complex, interactive UIs, using pure Javascript.
+		p It was created by engineers at #[strong Facebook] to create resuable components that can integrate easily with user data. It was open-sourced in 2013, at which point it started gaining traction amongst the development community, and eventually becoming the #[em (citation needed =&gt;)] most-used Javascript UI library in 2015.
+	h3 React is...
+	+rowBlockRight('http://www.codevoila.com/uploads/images/201603/concepts_of_reactjs_component.png','Sample React component structure')
+		h4 ...Component-Based
+		p Everything building block in React is a component. Components have properties, can have methods written in to them, can have state, are reusable, and can hold other components.
+		p Components have a lifecycle that determines things like when they render or if they get updated, and allows developers a huge amount of control over their applications' behavior.
+	+rowBlockLeft('http://image.slidesharecdn.com/reactjs-introduction-150311040508-conversion-gate01/95/react-js-introduction-16-638.jpg?cb=1426046763','Declarative JSX code.')
+		h4 ...Declarative
+		p Each component's properties and methods are written in their class. Using #[code JSX] syntax, you can compose components using a HTML-style Javascript code, where you can see the event handlers and inherited properties.
+		p This allows developers to have an easy-to-read preview of what their rendered component will look like.
+	+rowBlockRight('http://image.slidesharecdn.com/react-150410184943-conversion-gate01/95/react-52-638.jpg?cb=1428692033','Unidirectional data flow')
+		h4 ...Unidirectional
+		p React's data-flow is unidirectional; any given component- by default- can inherit properties (props) and methods from their parent component. (but 2-way data binding is still possible)
+		p This allows data to be easily traced and controlled as it moves to lower-level children components.
+	+rowBlockLeft('http://www.jaspaconsultancy.co.uk/img/stack_bw.jpg','stacks..on stacks...on stacks.')
+		h4 ...Stack-Agnostic
+		p React can be used by any tech stack, and can easily integrate with other libraries, tools, and frameworks.
+		p Using Express.js or another node.js-based server framework, React can even be rendered server-side to increase application speed and enhance user experience.

@@ -1,0 +1,14 @@
+block frontmatter
+include ../partials/head
+if page
+	- page.isInfo = true
+else
+	- var page = {}
+	- page.isInfo = true
+body.template-info
+	include ../partials/innerPageNav
+	article.container
+		block content
+	include ../partials/footer
+	
+- console.log('Info page compiled: ', page.title)
