@@ -4,12 +4,17 @@
   "description": "React demo for Archer Malmo",
   "main": "\"\"",
   "scripts": {
+    "babel": "cd source; babel -w js/* -d ../public/; cd -;",
+    "css": "cp -r source/css public/",
+    "pug": "pug -w source/views/{examples/*,*}.pug -o public -p source/views/parts/partials",
+    "serve": "cd public; httpster -p 20102; cd -;",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Geoff Davis <gdavis@archermalmo.com>",
   "license": "MIT",
   "devDependencies": {
     "babel": "^6.5.2",
+    "babel-cli": "^6.16.0",
     "pug": "^2.0.0-beta6"
   },
   "dependencies": {
