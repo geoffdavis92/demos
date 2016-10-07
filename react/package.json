@@ -7,6 +7,7 @@
     "build": "cd source && babel js/* -d ../public/; cp -r css ../public/; pug views/{examples/*,*}.pug -o ../public -p views/parts/partials; cd -;",
     "babel": "cd source; babel -w js/**/* -d ../public/; cd -;",
     "clean": "rm -r public",
+    "deploy": "cd source; pug views/{examples/*,*}.pug -o ../;babel js/**/* -d ../; cp -r css ../; cd -;",
     "css": "cp -r source/css public/",
     "pug": "pug -w source/views/{examples/*,*}.pug -o public -p source/views/parts/partials",
     "serve": "cd public && httpster -p 20102; cd -;",
