@@ -5,7 +5,7 @@ footer.page-footer.orange.accent-4
 				if page.back
 					- var backURL = `${page.back.replace(/\s/g,'-').replace(/\?/g,'').toLowerCase()}.html`
 				else
-					- var backURL = '/'
+					- var backURL = baseURL+'/'
 				if page.next
 					- var nextURL = `${page.next.replace(/\s/g,'-').replace(/\?/g,'').toLowerCase()}.html`
 				.row.clearfix
@@ -24,11 +24,11 @@ footer.page-footer.orange.accent-4
 									li(class=footerLiClass): a(href=sitepage.url class=footerAClass)= i
 					.col.s4
 						if nextURL 
-							a.btn.right.no-select.waves-effect.waves-light.light-blue(href=`${nextURL}`) Next&nbsp;&raquo;
+							a.btn.right.no-select.waves-effect.waves-light.light-blue(href=nextURL) Next&nbsp;&raquo;
 	.footer-copyright
 		.container.grey-text.text-lighten-4
 			small For Archer Malmo Digital Department.
 			small.right Created by Geoff Davis, 2016.
 if page && page.scripts
 	for script in page.scripts
-		script(src=`/js/${script}.js`)
+		script(src=`js/${script}.js`)
