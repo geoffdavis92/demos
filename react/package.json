@@ -9,6 +9,7 @@
     "clean": "rm -r public",
     "deploy": "cd source; pug views/{examples/*,*}.pug -o ../;babel js/**/* -d ../; cp -r css ../; cd -;",
     "css": "cp -r source/css public/",
+    "precheckout": "rm ./*.html; rm -r js css",
     "pug": "pug -w source/views/{examples/*,*}.pug -o public -p source/views/parts/partials",
     "serve": "cd public && httpster -p 20102; cd -;",
     "test": "echo \"Error: no test specified\" && exit 1"
