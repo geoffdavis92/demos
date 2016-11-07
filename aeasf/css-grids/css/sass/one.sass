@@ -1,0 +1,32 @@
+//body
+	display: grid
+	grid-gap: 1em
+	grid-template-columns: repeat(4, 1fr)
+	grid-template-rows: repeat(4, 1fr)
+header
+	grid-column: 1 / 5
+	grid-row: 1
+
+aside
+	grid-column: 1 / 1
+	grid-row: 2
+
+main
+	grid-column: 1 / 5
+	grid-row: 2
+
+footer
+	grid-column: 1 / 5
+	grid-row: 4
+section
+	display: grid
+	grid-gap: 1em
+	grid-template-columns: repeat(1, 1fr)
+	@media only screen and (min-width: 768px)
+		grid-template-columns: repeat(2, 1fr)
+	@media only screen and (min-width: 1100px)
+		grid-template-columns: repeat(4, 1fr)
+	// grid-template-rows: repeat(1,1fr)
+	article
+		background: #deffef
+		padding: 0 1em 

@@ -1,0 +1,5 @@
+# presentation ignores... 
+node_modules/ 
+npm-debug.log 
+.temp 
+.sass-cache/
