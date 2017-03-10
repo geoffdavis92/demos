@@ -1,0 +1,22 @@
+{
+  "name": "citgo-optimization",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "react-scripts": "0.9.5"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "scripts": {
+    "new:component": "touch src/$c.js src/styles/$c.css",
+    "new:data": "touch src/data/$d",
+    "new:helper": "touch src/helpers/$h",
+    "new:view": "touch src/views/$v.js src/styles/$v.css",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
