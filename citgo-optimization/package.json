@@ -8,7 +8,8 @@
   "dependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "react-router": "latest"
+    "react-router": "latest",
+    "react-router-dom": "next"
   },
   "scripts": {
     "new:component": "touch src/$c.js src/styles/$c.css && printf \"// $c\nimport React, { Component } from 'react'\nimport './styles/$c.css'\" > src/$c.js",
