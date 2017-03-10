@@ -7,13 +7,14 @@
   },
   "dependencies": {
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "react-router": "latest"
   },
   "scripts": {
-    "new:component": "touch src/$c.js src/styles/$c.css",
+    "new:component": "touch src/$c.js src/styles/$c.css && printf \"// $c\nimport React, { Component } from \"react\"\nimport './styles/$c.css'\" > src/$c.js",
     "new:data": "touch src/data/$d",
-    "new:helper": "touch src/helpers/$h",
-    "new:view": "touch src/views/$v.js src/styles/$v.css",
+    "new:helper": "printf \"// $h\nimport React from \"react\"\" > src/helpers/$h.js",
+    "new:view": "touch src/views/$v.js src/styles/$v.css && printf \"// $v\nimport React, { Component } from \"react\"\nimport './styles/$v.css'\" > src/views/$v.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
