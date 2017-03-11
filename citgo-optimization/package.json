@@ -6,16 +6,18 @@
     "react-scripts": "0.9.5"
   },
   "dependencies": {
+    "flow-bin": "^0.41.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-router": "latest",
     "react-router-dom": "next"
   },
   "scripts": {
-    "new:component": "touch src/$c.js src/styles/$c.css && printf \"// $c\nimport React, { Component } from 'react'\nimport './styles/$c.css'\" > src/$c.js",
+    "delete": "rm src/{.,views,styles,helpers,data}/$f.*; clear",
+    "new:component": "touch src/$c.js src/styles/$c.css && printf \"// $c @flow\nimport React, { Component } from 'react'\nimport './styles/$c.css'\" >> src/$c.js",
     "new:data": "touch src/data/$d",
-    "new:helper": "printf \"// $h\nimport React from 'react'\" > src/helpers/$h.js",
-    "new:view": "touch src/views/$v.js src/styles/$v.css && printf \"// $v\nimport React, { Component } from 'react'\nimport './styles/$v.css'\" > src/views/$v.js",
+    "new:helper": "printf \"// $h @flow\nimport React from 'react'\" >> src/helpers/$h.js",
+    "new:view": "touch src/views/$v.js src/styles/$v.css && printf \"// $v @flow\nimport React, { Component } from 'react'\nimport '../styles/$v.css'\" >> src/views/$v.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

@@ -52,3 +52,13 @@ Creates:
 ```
 
 ---
+
+Easily delete a component, data file:
+
+`$ f=<File Name> run delete`
+
+Deletes:
+
+```
+<File Name>.<Any File Extension>
+```
