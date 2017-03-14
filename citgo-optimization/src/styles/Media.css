@@ -1,0 +1,54 @@
+.mediaObject {
+	border: 1px solid #ccc;
+	box-shadow: 0px 0px 3px #c9c9c9;
+	cursor: pointer;
+	font-family: sans-serif;
+	width: 100%;
+	transition: .15s border-color;
+	user-select: none;
+	max-width: 60vw;
+}
+
+.mediaObject.mediaObject-click {
+	border-color: #fd6688;
+	transition: .15s border-color;
+}
+
+.mediaObject_thumb, .mediaObject_content {
+	vertical-align: middle;
+}
+
+.mediaObject_thumb {
+	display: inline-block;
+	max-width: 150px;
+}
+
+.mediaObject_thumb_image {
+	display: block;
+	width: 100%;
+}
+
+.mediaObject_content {
+	display: inline-block;
+}
+
+.mediaObject_header {
+	border-bottom: 2px solid gold;
+}
+
+.mediaObject_header_link {
+	color: #fd6688;
+	text-decoration: none;
+}
+
+.mediaObject_header_title {
+
+}
+
+.mediaObject_header_subtitle {
+
+}
+
+.mediaObject_body {
+
+}
