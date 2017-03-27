@@ -1,0 +1,38 @@
+body {
+  display: grid;
+  grid-template-areas: "header" "aside" "main" "footer"; }
+@media only screen and (min-width: 768px) {
+  body {
+    grid-template-areas: "header header" "aside main" "footer footer"; } }
+
+header {
+  grid-area: header; }
+
+header, footer {
+  text-align: center; }
+
+main {
+  padding: 0 2em; }
+
+aside {
+  grid-area: aside;
+  padding: 1em; }
+aside a {
+  padding: 0.33em 0.66em; }
+
+section {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); }
+@media only screen and (min-width: 768px) {
+  section {
+    grid-template-columns: repeat(2, 1fr); }
+  section article {
+    padding: 0.5em 1em; } }
+@media only screen and (min-width: 1100px) {
+  section {
+    grid-template-columns: repeat(4, 1fr); } }
+
+footer {
+  grid-area: footer; }
+
+/*# sourceMappingURL=two.css.map */

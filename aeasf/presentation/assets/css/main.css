@@ -1,0 +1,62 @@
+body {
+  font-family: "Roboto", "Open Sans", sans-serif; }
+
+h1 {
+  font-size: 2em; }
+  h1 + h2 {
+    font-size: 1.25; }
+
+hr {
+  border: 0px solid transparent;
+  border-bottom: 1px solid #000; }
+
+[data-slide="1"] {
+  background-color: #2B4450;
+  color: #fff;
+  text-align: center; }
+
+[data-slide="3"] {
+  background-color: #DFEBED; }
+
+[data-slide="4"] {
+  background-color: #F78536;
+  color: #fff; }
+  [data-slide="4"] .NavButton {
+    background: #2B4450; }
+    [data-slide="4"] .NavButton:focus, [data-slide="4"] .NavButton:active {
+      background: #19282f; }
+
+#app article h1 {
+  text-align: center; }
+#app article main {
+  margin: auto;
+  max-width: 50vw; }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  position: fixed;
+  bottom: 5vh;
+  left: 25vw;
+  width: 50vw; }
+
+.NavButton {
+  appearance: none;
+  background: #F78536;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 1.125em;
+  padding: 0.5em 1em;
+  transition: 0.2s opacity, 0.2s background; }
+  .NavButton:focus, .NavButton:active {
+    background: #f0680a;
+    border: 2px dashed #2B4450;
+    outline: none; }
+  .NavButton:disabled {
+    background: #979797;
+    opacity: 0.33;
+    transition: 0.2s opacity, 0.2s background; }
+
+/*# sourceMappingURL=main.css.map */
